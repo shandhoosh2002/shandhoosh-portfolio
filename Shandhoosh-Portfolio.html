@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Shandhoosh V — Mechatronics Engineer specializing in AI, computer vision, robotics, industrial automation and mechanical design.">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Shandhoosh V — Mechatronics Engineer specializing in AI, computer vision, robotics, industrial automation and mechanical design.">
 
 <title>Shandhoosh V | AI × Robotics × Mechatronics</title>
 
+
 <script>
+
 /* =========================================================
    PORTFOLIO MEDIA CONFIGURATION
 
@@ -20,7 +26,7 @@
    Example:
    assets/images/profile.jpeg
    assets/images/magnetic-crawler.jpg
-   assets/images/spider-robot.mp4
+   assets/images/spider.mp4
 
    Leave "" if an image is not available yet.
    ========================================================= */
@@ -50,16 +56,26 @@ const PROJECT_IMAGES = {
 
 /* =========================================================
    SPIDER ROBOT VIDEO
-
-   Put the video here:
-
-   assets/images/spider-robot.mp4
-
-   You can also use .webm if required.
    ========================================================= */
 
 const SPIDER_VIDEO = "assets/images/spider.mp4";
+
+
+/* =========================================================
+   ONLINE PROFILE LINKS
+   ========================================================= */
+
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b";
+
+const PORTFOLIO_URL =
+  "https://your-portfolio-link.com";
+
+const EMAIL =
+  "shandhooshveeraragavan@gmail.com";
+
 </script>
+
 
 <style>
 
@@ -95,7 +111,9 @@ const SPIDER_VIDEO = "assets/images/spider.mp4";
 }
 
 
-/* RESET */
+/* =========================================================
+   RESET
+   ========================================================= */
 
 *{
   box-sizing:border-box;
@@ -106,7 +124,9 @@ html{
 }
 
 body{
+
   margin:0;
+
   font-family:
     Inter,
     ui-sans-serif,
@@ -118,11 +138,22 @@ body{
     sans-serif;
 
   background:
-    radial-gradient(circle at 50% -10%,rgba(255,59,48,.08),transparent 35%),
-    radial-gradient(circle at 100% 50%,rgba(53,215,255,.05),transparent 30%),
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(255,59,48,.08),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(53,215,255,.05),
+      transparent 30%
+    ),
+
     var(--bg);
 
   color:var(--white);
+
   line-height:1.6;
 }
 
@@ -132,7 +163,9 @@ a{
 }
 
 .container{
+
   width:min(1180px,92%);
+
   margin:auto;
 }
 
@@ -142,23 +175,38 @@ a{
    ========================================================= */
 
 body:before{
+
   content:"";
+
   position:fixed;
+
   inset:0;
+
   pointer-events:none;
+
   z-index:-1;
 
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
 
   background-size:50px 50px;
 
-  mask-image:linear-gradient(
-    to bottom,
-    black,
-    transparent 90%
-  );
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 90%
+    );
 }
 
 
@@ -167,51 +215,71 @@ body:before{
    ========================================================= */
 
 nav{
+
   position:fixed;
+
   top:0;
   left:0;
   right:0;
+
   z-index:100;
 
-  background:rgba(5,7,10,.82);
+  background:
+    rgba(5,7,10,.82);
+
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 }
 
 .nav{
+
   height:72px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 }
 
 .brand{
+
   font-weight:900;
+
   letter-spacing:2px;
+
   font-size:15px;
 }
 
 .brand span{
+
   color:var(--red);
 }
 
 .links{
+
   display:flex;
+
   gap:25px;
 
   color:#aeb7c3;
+
   font-size:13px;
 }
 
 .links a{
+
   transition:.25s;
 }
 
 .links a:hover{
+
   color:#fff;
-  text-shadow:0 0 12px rgba(53,215,255,.7);
+
+  text-shadow:
+    0 0 12px rgba(53,215,255,.7);
 }
 
 
@@ -220,6 +288,7 @@ nav{
    ========================================================= */
 
 .hero{
+
   min-height:100vh;
 
   padding:
@@ -227,9 +296,11 @@ nav{
     80px;
 
   position:relative;
+
   overflow:hidden;
 
   background:
+
     radial-gradient(
       circle at 82% 35%,
       rgba(255,59,48,.18),
@@ -251,31 +322,44 @@ nav{
 }
 
 .hero:after{
+
   content:"";
 
   position:absolute;
+
   width:500px;
   height:500px;
 
   right:-200px;
   top:-200px;
 
-  border:1px solid rgba(245,185,66,.16);
+  border:
+    1px solid
+    rgba(245,185,66,.16);
+
   border-radius:50%;
 
   box-shadow:
-    0 0 0 50px rgba(245,185,66,.025),
-    0 0 0 100px rgba(245,185,66,.015);
+
+    0 0 0 50px
+    rgba(245,185,66,.025),
+
+    0 0 0 100px
+    rgba(245,185,66,.015);
 
   pointer-events:none;
 }
 
 .hero-grid{
+
   position:relative;
+
   z-index:2;
 
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+
+  grid-template-columns:
+    1.05fr .95fr;
 
   gap:70px;
 
@@ -283,15 +367,22 @@ nav{
 }
 
 
-/* HERO TEXT */
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
 
 .kicker{
+
   display:inline-flex;
+
   align-items:center;
+
   gap:10px;
 
   font-size:12px;
+
   text-transform:uppercase;
+
   letter-spacing:3px;
 
   color:var(--cyan);
@@ -300,7 +391,9 @@ nav{
 }
 
 .kicker:before{
+
   content:"";
+
   width:28px;
   height:2px;
 
@@ -311,14 +404,14 @@ nav{
 }
 
 h1{
-  font-size:clamp(46px,6.5vw,82px);
+
+  font-size:
+    clamp(46px,6.5vw,82px);
 
   line-height:.95;
 
   margin:
-    20px
-    0
-    25px;
+    20px 0 25px;
 
   letter-spacing:-4px;
 
@@ -326,13 +419,16 @@ h1{
 }
 
 .hero h1 span{
+
   color:var(--red);
 
   text-shadow:
-    0 0 30px rgba(255,59,48,.35);
+    0 0 30px
+    rgba(255,59,48,.35);
 }
 
 .hero p{
+
   max-width:720px;
 
   font-size:18px;
@@ -346,7 +442,9 @@ h1{
    ========================================================= */
 
 .cta{
+
   display:flex;
+
   gap:13px;
 
   margin-top:32px;
@@ -355,11 +453,13 @@ h1{
 }
 
 .btn{
+
   padding:13px 19px;
 
   border-radius:7px;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   font-weight:800;
 
@@ -371,25 +471,30 @@ h1{
 }
 
 .btn:hover{
+
   transform:translateY(-3px);
 }
 
 .btn.primary{
-  background:linear-gradient(
-    135deg,
-    var(--red),
-    var(--red2)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--red2)
+    );
 
   border-color:var(--red);
 
   color:#fff;
 
   box-shadow:
-    0 0 25px rgba(255,59,48,.22);
+    0 0 25px
+    rgba(255,59,48,.22);
 }
 
 .btn.secondary{
+
   color:var(--gold);
 
   border-color:
@@ -400,20 +505,24 @@ h1{
 }
 
 .btn.ghost{
+
   color:#d9e1e9;
 }
 
 
 /* =========================================================
-   HERO PROFILE / ARC REACTOR STYLE CARD
+   HERO CARD
    ========================================================= */
 
 .hero-card{
+
   position:relative;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   background:
+
     linear-gradient(
       145deg,
       rgba(255,255,255,.055),
@@ -430,9 +539,11 @@ h1{
 }
 
 .hero-card:before{
+
   content:"";
 
   position:absolute;
+
   left:0;
   top:0;
 
@@ -440,6 +551,7 @@ h1{
   height:2px;
 
   background:
+
     linear-gradient(
       90deg,
       transparent,
@@ -450,13 +562,17 @@ h1{
     );
 
   box-shadow:
-    0 0 15px rgba(255,59,48,.6);
+    0 0 15px
+    rgba(255,59,48,.6);
 }
 
 
-/* PROFILE IMAGE */
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
 
 .profile-frame{
+
   height:430px;
 
   border-radius:15px;
@@ -466,10 +582,13 @@ h1{
   overflow:hidden;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   background:
+
     radial-gradient(
       circle at center,
       rgba(53,215,255,.08),
@@ -482,14 +601,14 @@ h1{
       #070a0e
     );
 
-  border:1px solid rgba(53,215,255,.15);
+  border:
+    1px solid
+    rgba(53,215,255,.15);
 }
-
-
-/* HUD corners */
 
 .profile-frame:before,
 .profile-frame:after{
+
   content:"";
 
   position:absolute;
@@ -507,28 +626,31 @@ h1{
 }
 
 .profile-frame:before{
+
   left:15px;
   top:15px;
 
-  border-width:2px 0 0 2px;
+  border-width:
+    2px 0 0 2px;
 }
 
 .profile-frame:after{
+
   right:15px;
   bottom:15px;
 
-  border-width:0 2px 2px 0;
+  border-width:
+    0 2px 2px 0;
 }
 
-
-/* PROFILE PLACEHOLDER */
-
 .profile-placeholder{
+
   display:flex;
 
   flex-direction:column;
 
   align-items:center;
+
   justify-content:center;
 
   gap:12px;
@@ -542,14 +664,18 @@ h1{
 }
 
 .profile-placeholder .profile-icon{
+
   width:100px;
   height:100px;
 
   border-radius:50%;
 
-  border:2px solid var(--cyan);
+  border:
+    2px solid
+    var(--cyan);
 
   display:flex;
+
   align-items:center;
   justify-content:center;
 
@@ -558,10 +684,12 @@ h1{
   color:var(--cyan);
 
   box-shadow:
-    0 0 25px rgba(53,215,255,.15);
+    0 0 25px
+    rgba(53,215,255,.15);
 }
 
 .profile-placeholder small{
+
   font-size:10px;
 
   letter-spacing:2px;
@@ -570,19 +698,19 @@ h1{
 }
 
 .profile-image{
+
   width:100%;
   height:100%;
 
   object-fit:cover;
+
   object-position:center top;
 
   display:block;
 }
 
-
-/* HUD LABEL */
-
 .hud-label{
+
   position:absolute;
 
   bottom:17px;
@@ -598,11 +726,14 @@ h1{
 
   color:var(--cyan);
 
-  background:rgba(0,0,0,.55);
+  background:
+    rgba(0,0,0,.55);
 
   padding:7px 10px;
 
-  border-left:2px solid var(--red);
+  border-left:
+    2px solid
+    var(--red);
 }
 
 
@@ -611,13 +742,16 @@ h1{
    ========================================================= */
 
 .section{
+
   padding:100px 0;
 
   position:relative;
 }
 
 .section.dark{
+
   background:
+
     linear-gradient(
       180deg,
       rgba(255,255,255,.015),
@@ -626,7 +760,9 @@ h1{
 }
 
 .section.light{
+
   background:
+
     linear-gradient(
       180deg,
       #0b0f14,
@@ -635,9 +771,12 @@ h1{
 }
 
 
-/* SECTION HEADINGS */
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
 
 .eyebrow{
+
   font-family:monospace;
 
   font-size:11px;
@@ -652,19 +791,20 @@ h1{
 }
 
 h2{
-  font-size:clamp(34px,4vw,54px);
+
+  font-size:
+    clamp(34px,4vw,54px);
 
   line-height:1.05;
 
   letter-spacing:-2px;
 
   margin:
-    10px
-    0
-    20px;
+    10px 0 20px;
 }
 
 .lead{
+
   font-size:17px;
 
   color:var(--muted);
@@ -678,14 +818,17 @@ h2{
    ========================================================= */
 
 .about-grid{
+
   display:grid;
 
-  grid-template-columns:1.3fr .7fr;
+  grid-template-columns:
+    1.3fr .7fr;
 
   gap:60px;
 }
 
 .statbox{
+
   padding:18px 0;
 
   border-top:
@@ -693,6 +836,7 @@ h2{
 }
 
 .statbox strong{
+
   font-size:28px;
 
   display:block;
@@ -700,10 +844,12 @@ h2{
   color:var(--gold);
 
   text-shadow:
-    0 0 15px rgba(245,185,66,.15);
+    0 0 15px
+    rgba(245,185,66,.15);
 }
 
 .statbox span{
+
   color:var(--muted);
 
   font-size:12px;
@@ -715,6 +861,7 @@ h2{
    ========================================================= */
 
 .timeline{
+
   border-left:
     1px solid
     rgba(53,215,255,.25);
@@ -725,12 +872,14 @@ h2{
 }
 
 .role{
+
   position:relative;
 
   margin-bottom:42px;
 }
 
 .role:before{
+
   content:"";
 
   position:absolute;
@@ -755,12 +904,14 @@ h2{
 }
 
 .role h3{
+
   margin:0;
 
   font-size:20px;
 }
 
 .meta{
+
   color:var(--cyan);
 
   font-family:monospace;
@@ -768,12 +919,11 @@ h2{
   font-size:11px;
 
   margin:
-    4px
-    0
-    10px;
+    4px 0 10px;
 }
 
 .role ul{
+
   margin:0;
 
   padding-left:18px;
@@ -787,6 +937,7 @@ h2{
    ========================================================= */
 
 .project-grid{
+
   display:grid;
 
   grid-template-columns:
@@ -798,7 +949,9 @@ h2{
 }
 
 .project{
+
   background:
+
     linear-gradient(
       145deg,
       #0d131a,
@@ -821,6 +974,7 @@ h2{
 }
 
 .project:before{
+
   content:"";
 
   position:absolute;
@@ -832,6 +986,7 @@ h2{
   height:100%;
 
   background:
+
     linear-gradient(
       to bottom,
       var(--red),
@@ -844,14 +999,17 @@ h2{
 }
 
 .project:hover{
+
   transform:translateY(-6px);
 
   border-color:
     rgba(53,215,255,.28);
 
   box-shadow:
+
     0 20px 50px
     rgba(0,0,0,.45),
+
     0 0 20px
     rgba(53,215,255,.05);
 }
@@ -862,6 +1020,7 @@ h2{
    ========================================================= */
 
 .visual{
+
   height:220px;
 
   position:relative;
@@ -869,6 +1028,7 @@ h2{
   overflow:hidden;
 
   background:
+
     radial-gradient(
       circle at center,
       rgba(53,215,255,.08),
@@ -883,6 +1043,7 @@ h2{
 }
 
 .visual:after{
+
   content:"SYSTEM VISUAL";
 
   position:absolute;
@@ -902,8 +1063,7 @@ h2{
     1px solid
     rgba(245,185,66,.25);
 
-  padding:
-    5px 7px;
+  padding:5px 7px;
 
   background:
     rgba(0,0,0,.4);
@@ -915,6 +1075,7 @@ h2{
    ========================================================= */
 
 .image-placeholder{
+
   height:100%;
 
   min-height:220px;
@@ -922,6 +1083,7 @@ h2{
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   flex-direction:column;
@@ -933,6 +1095,7 @@ h2{
   text-align:center;
 
   background:
+
     linear-gradient(
       135deg,
       rgba(255,59,48,.025),
@@ -949,6 +1112,7 @@ h2{
 }
 
 .image-placeholder .icon{
+
   font-size:30px;
 
   color:var(--cyan);
@@ -957,6 +1121,7 @@ h2{
 }
 
 .image-placeholder small{
+
   font-size:10px;
 
   letter-spacing:1.5px;
@@ -970,6 +1135,7 @@ h2{
    ========================================================= */
 
 .project-image{
+
   width:100%;
   height:100%;
 
@@ -986,19 +1152,20 @@ h2{
    ========================================================= */
 
 .project-body{
+
   padding:23px;
 }
 
 .project-body h3{
+
   margin:
-    0
-    0
-    8px;
+    0 0 8px;
 
   font-size:20px;
 }
 
 .project-body p{
+
   margin:0;
 
   color:#8994a1;
@@ -1007,6 +1174,7 @@ h2{
 }
 
 .tags{
+
   display:flex;
 
   gap:7px;
@@ -1017,6 +1185,7 @@ h2{
 }
 
 .tag{
+
   font-size:10px;
 
   border:
@@ -1026,8 +1195,7 @@ h2{
   border-radius:3px;
 
   padding:
-    4px
-    8px;
+    4px 8px;
 
   color:#8bdff2;
 
@@ -1043,10 +1211,12 @@ h2{
    ========================================================= */
 
 .compact{
+
   height:160px;
 }
 
 .compact .image-placeholder{
+
   min-height:160px;
 }
 
@@ -1056,6 +1226,7 @@ h2{
    ========================================================= */
 
 .video-container{
+
   position:relative;
 
   width:100%;
@@ -1065,6 +1236,7 @@ h2{
 }
 
 .project-video{
+
   width:100%;
   height:100%;
 
@@ -1076,6 +1248,7 @@ h2{
 }
 
 .video-overlay{
+
   position:absolute;
 
   left:15px;
@@ -1109,6 +1282,7 @@ h2{
    ========================================================= */
 
 .skill-grid{
+
   display:grid;
 
   grid-template-columns:
@@ -1120,6 +1294,7 @@ h2{
 }
 
 .skill{
+
   padding:20px;
 
   border:
@@ -1133,11 +1308,13 @@ h2{
 }
 
 .skill:hover{
+
   border-color:
     rgba(245,185,66,.25);
 }
 
 .skill b{
+
   display:block;
 
   margin-bottom:8px;
@@ -1146,6 +1323,7 @@ h2{
 }
 
 .skill span{
+
   font-size:12px;
 
   color:#778290;
@@ -1157,7 +1335,9 @@ h2{
    ========================================================= */
 
 .pub{
+
   background:
+
     linear-gradient(
       135deg,
       #10161e,
@@ -1184,19 +1364,20 @@ h2{
 }
 
 .pub strong{
+
   color:#f2f5f8;
 }
 
 .pub p{
+
   color:#858f9d;
 
   margin:
-    7px
-    0
-    0;
+    7px 0 0;
 }
 
 .pub .pill{
+
   border:
     1px solid
     rgba(245,185,66,.35);
@@ -1204,8 +1385,7 @@ h2{
   color:var(--gold);
 
   padding:
-    9px
-    13px;
+    9px 13px;
 
   border-radius:3px;
 
@@ -1218,11 +1398,175 @@ h2{
 
 
 /* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.cert-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:20px;
+
+  margin-top:38px;
+}
+
+.cert-card{
+
+  position:relative;
+
+  padding:26px;
+
+  min-height:190px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:12px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #0e151d,
+      #080c11
+    );
+
+  overflow:hidden;
+
+  transition:.3s;
+}
+
+.cert-card:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:4px;
+  height:100%;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      var(--gold),
+      var(--red),
+      transparent
+    );
+}
+
+.cert-card:hover{
+
+  transform:translateY(-5px);
+
+  border-color:
+    rgba(245,185,66,.35);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.35);
+}
+
+.cert-icon{
+
+  width:48px;
+  height:48px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border:
+    1px solid
+    rgba(53,215,255,.3);
+
+  border-radius:8px;
+
+  color:var(--cyan);
+
+  font-size:22px;
+
+  background:
+    rgba(53,215,255,.04);
+
+  margin-bottom:18px;
+}
+
+.cert-card h3{
+
+  margin:
+    0 0 8px;
+
+  font-size:18px;
+
+  color:#f5f7fa;
+}
+
+.cert-card .issuer{
+
+  color:var(--gold);
+
+  font-family:monospace;
+
+  font-size:10px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+.cert-card p{
+
+  color:#8994a1;
+
+  font-size:12px;
+
+  margin:0;
+}
+
+.cert-score{
+
+  display:inline-block;
+
+  margin-top:13px;
+
+  padding:5px 9px;
+
+  border:
+    1px solid
+    rgba(255,59,48,.35);
+
+  border-radius:3px;
+
+  color:#ff837c;
+
+  background:
+    rgba(255,59,48,.05);
+
+  font-family:monospace;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
    CONFIDENTIALITY
    ========================================================= */
 
 .notice{
+
   background:
+
     linear-gradient(
       135deg,
       rgba(255,59,48,.04),
@@ -1234,8 +1578,7 @@ h2{
     var(--red);
 
   padding:
-    20px
-    22px;
+    20px 22px;
 
   border-radius:5px;
 
@@ -1250,7 +1593,9 @@ h2{
    ========================================================= */
 
 .contact-section{
+
   background:
+
     radial-gradient(
       circle at 70% 30%,
       rgba(255,59,48,.12),
@@ -1261,6 +1606,7 @@ h2{
 }
 
 .contact-line{
+
   font-family:monospace;
 
   color:var(--cyan);
@@ -1276,6 +1622,7 @@ h2{
    ========================================================= */
 
 footer{
+
   background:#030507;
 
   color:#707b88;
@@ -1288,6 +1635,7 @@ footer{
 }
 
 .footergrid{
+
   display:flex;
 
   justify-content:space-between;
@@ -1298,10 +1646,12 @@ footer{
 }
 
 .footergrid strong{
+
   color:#fff;
 }
 
 .contact a{
+
   color:var(--cyan);
 }
 
@@ -1311,6 +1661,7 @@ footer{
    ========================================================= */
 
 .modal{
+
   position:fixed;
 
   inset:0;
@@ -1323,6 +1674,7 @@ footer{
   display:none;
 
   align-items:center;
+
   justify-content:center;
 
   padding:20px;
@@ -1331,10 +1683,12 @@ footer{
 }
 
 .modal.open{
+
   display:flex;
 }
 
 .modalbox{
+
   max-width:820px;
 
   width:100%;
@@ -1344,6 +1698,7 @@ footer{
   overflow:auto;
 
   background:
+
     linear-gradient(
       145deg,
       #10161e,
@@ -1364,6 +1719,7 @@ footer{
 }
 
 .close{
+
   float:right;
 
   border:
@@ -1386,19 +1742,24 @@ footer{
 }
 
 .modalbox h2{
+
   color:#fff;
 }
 
 .modalbox li{
+
   margin:7px 0;
 
   color:#9ba6b3;
 }
 
 
-/* MODAL VIDEO */
+/* =========================================================
+   MODAL VIDEO
+   ========================================================= */
 
 .modal-video{
+
   width:100%;
 
   max-height:430px;
@@ -1408,8 +1769,7 @@ footer{
   border-radius:8px;
 
   margin:
-    20px
-    0;
+    20px 0;
 
   display:block;
 }
@@ -1420,6 +1780,7 @@ footer{
    ========================================================= */
 
 .image-modal{
+
   position:fixed;
 
   inset:0;
@@ -1432,6 +1793,7 @@ footer{
   display:none;
 
   align-items:center;
+
   justify-content:center;
 
   padding:30px;
@@ -1440,10 +1802,12 @@ footer{
 }
 
 .image-modal.open{
+
   display:flex;
 }
 
 .image-modal img{
+
   max-width:95vw;
 
   max-height:90vh;
@@ -1463,6 +1827,7 @@ footer{
   border-radius:8px;
 
   box-shadow:
+
     0 0 50px
     rgba(0,0,0,.8),
 
@@ -1471,14 +1836,13 @@ footer{
 }
 
 .image-modal-close{
+
   position:absolute;
 
   top:20px;
-
   right:25px;
 
   width:42px;
-
   height:42px;
 
   border:
@@ -1499,6 +1863,7 @@ footer{
 }
 
 .image-modal-close:hover{
+
   border-color:var(--cyan);
 
   color:var(--cyan);
@@ -1510,11 +1875,13 @@ footer{
    ========================================================= */
 
 .hud-line{
+
   width:100%;
 
   height:1px;
 
   background:
+
     linear-gradient(
       90deg,
       var(--red),
@@ -1523,11 +1890,11 @@ footer{
     );
 
   margin:
-    25px
-    0;
+    25px 0;
 }
 
 .status-indicator{
+
   display:inline-flex;
 
   align-items:center;
@@ -1544,6 +1911,7 @@ footer{
 }
 
 .status-indicator:before{
+
   content:"";
 
   width:6px;
@@ -1579,6 +1947,10 @@ footer{
   }
 
   .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cert-grid{
     grid-template-columns:1fr;
   }
 
@@ -1647,7 +2019,9 @@ footer{
 
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      NAVIGATION
@@ -1658,7 +2032,7 @@ footer{
 <div class="container nav">
 
 <a class="brand" href="#home">
-SHANDHOOSH<span> </span>V
+SHANDHOOSH<span> V</span>
 </a>
 
 <div class="links">
@@ -1666,6 +2040,7 @@ SHANDHOOSH<span> </span>V
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
 <a href="#skills">Skills</a>
 <a href="#research">Research</a>
 <a href="#contact">Contact</a>
@@ -1712,16 +2087,16 @@ Explore Projects
 Let's Connect
 </a>
 
-<a class="btn ghost"
+<a
+class="btn ghost"
 href="https://mail.google.com/mail/?view=cm&fs=1&to=shandhooshveeraragavan@gmail.com"
 target="_blank"
 rel="noopener noreferrer">
+
 Email
+
 </a>
 
-</div>
-
-<div class="contact-line">
 </div>
 
 </div>
@@ -1830,7 +2205,7 @@ connecting systems for industrial use.
 
 <div class="statbox">
 <strong>CAD</strong>
-<span>SolidWorks / Creo / Fusion 360 / UGNX</span>
+<span>SolidWorks / Creo / Fusion 360 / UG NX</span>
 </div>
 
 </div>
@@ -1857,6 +2232,7 @@ R&D Experience
 </h2>
 
 <div class="timeline">
+
 
 <div class="role">
 
@@ -1940,6 +2316,49 @@ Worked with CNC machines and performed quality testing for automobile parts.
 
 
 <!-- =========================================================
+     CONFIDENTIALITY
+     MOVED BEFORE INDUSTRIAL PROJECTS
+     ========================================================= -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="eyebrow">
+03 / CONFIDENTIALITY
+</div>
+
+<h2>
+Responsible Presentation of Industrial Work.
+</h2>
+
+<div class="notice">
+
+Certain industrial projects in this portfolio use
+AI-generated conceptual illustrations for external
+presentation.
+
+<br><br>
+
+Actual project photographs, CAD models, drawings,
+plant images, production data and company-specific
+technical information are confidential and have
+therefore not been included.
+
+<br><br>
+
+Non-confidential photographs, CAD renders, system
+diagrams, screenshots and representative visuals
+may be added to the project sections.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
      INDUSTRIAL PROJECTS
      ========================================================= -->
 
@@ -1948,7 +2367,7 @@ Worked with CNC machines and performed quality testing for automobile parts.
 <div class="container">
 
 <div class="eyebrow">
-03 / SELECTED WORK
+04 / SELECTED WORK
 </div>
 
 <h2>
@@ -1957,8 +2376,9 @@ Industrial Projects
 
 <p class="lead">
 
-Conceptual visuals are used here because real industrial
-images, drawings and production information may be confidential.
+Selected R&D projects combining computer vision,
+AI/ML, robotics, mechanical design and industrial
+automation.
 
 </p>
 
@@ -2180,7 +2600,7 @@ from user-defined parameters.
 <div class="container">
 
 <div class="eyebrow">
-04 / AI & SOFTWARE
+05 / AI & SOFTWARE
 </div>
 
 <h2>
@@ -2293,7 +2713,7 @@ rotating-shell motion patterns.
 <div class="container">
 
 <div class="eyebrow">
-05 / ROBOTICS & DESIGN
+06 / ROBOTICS & DESIGN
 </div>
 
 <h2>
@@ -2376,8 +2796,8 @@ preload="metadata"
 onclick="event.stopPropagation();">
 
 <source
- src="assets/images/spider-robot.mp4"
- type="video/mp4">
+src="assets/images/spider.mp4"
+type="video/mp4">
 
 </video>
 
@@ -2451,7 +2871,7 @@ chair structures in Fusion 360.
 <div class="container">
 
 <div class="eyebrow">
-06 / ENGINEERING TOOLKIT
+07 / ENGINEERING TOOLKIT
 </div>
 
 <h2>
@@ -2520,7 +2940,7 @@ ROS · Arduino · Simulink · CarMaker · NVIDIA L4T
 <div class="container">
 
 <div class="eyebrow">
-07 / RESEARCH
+08 / RESEARCH
 </div>
 
 <h2>
@@ -2554,7 +2974,9 @@ color:var(--cyan);
 font-family:monospace;
 font-size:11px;
 ">
+
 VIEW PUBLICATION ↗
+
 </p>
 
 </a>
@@ -2567,35 +2989,142 @@ RESEARCH PUBLICATION
 
 </div>
 
+</div>
+
 </section>
 
 
 <!-- =========================================================
-     CONFIDENTIALITY
+     CERTIFICATIONS
      ========================================================= -->
 
-<section class="section light">
+<section class="section light" id="certifications">
 
 <div class="container">
 
 <div class="eyebrow">
-08 / CONFIDENTIALITY
+09 / CERTIFICATIONS
 </div>
 
 <h2>
-Responsible Presentation of Industrial Work.
+Certifications & Professional Learning
 </h2>
 
-<div class="notice">
+<p class="lead">
 
-Certain industrial projects in this portfolio use
-AI-generated conceptual illustrations for external
-presentation.
+Certifications supporting my background across mechanical
+design, industrial AI, machine learning, IIoT and software
+development.
 
-Actual project photographs, CAD models, drawings,
-plant images, production data and company-specific
-technical information are confidential and have
-therefore not been included.
+</p>
+
+
+<div class="cert-grid">
+
+
+<!-- CSWA -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+⚙
+</div>
+
+<div class="issuer">
+Dassault Systèmes / SOLIDWORKS
+</div>
+
+<h3>
+Certified SOLIDWORKS Associate — CSWA
+</h3>
+
+<p>
+Certification demonstrating proficiency in SOLIDWORKS
+3D CAD modelling, part modelling, assemblies and
+core mechanical-design concepts.
+</p>
+
+<div class="cert-score">
+CSWA SCORE: 192 / 200
+</div>
+
+</div>
+
+
+<!-- IIT ROORKEE -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+AI
+</div>
+
+<div class="issuer">
+IIT Roorkee
+</div>
+
+<h3>
+Applications of AI, ML & IIoT for Industry
+</h3>
+
+<p>
+Professional learning focused on the application of
+Artificial Intelligence, Machine Learning and Industrial
+IoT technologies in industrial environments.
+</p>
+
+</div>
+
+
+<!-- C C++ -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+C++
+</div>
+
+<div class="issuer">
+CSC Institute
+</div>
+
+<h3>
+Diploma in C, C++ & OOP Concepts
+</h3>
+
+<p>
+Training covering C and C++ programming fundamentals,
+object-oriented programming concepts and software
+development principles.
+</p>
+
+</div>
+
+
+<!-- JAVA -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+J
+</div>
+
+<div class="issuer">
+CSC Institute
+</div>
+
+<h3>
+Diploma in Java
+</h3>
+
+<p>
+Training covering Java programming fundamentals,
+object-oriented programming and application-development
+concepts.
+</p>
+
+</div>
+
 
 </div>
 
@@ -2614,7 +3143,7 @@ therefore not been included.
 <div class="container">
 
 <div class="eyebrow">
-09 / CONTACT
+10 / CONTACT
 </div>
 
 <h2>
@@ -2629,10 +3158,11 @@ mechanical R&D.
 
 </p>
 
+
 <div class="cta">
 
-
-<a class="btn primary"
+<a
+class="btn primary"
 href="https://mail.google.com/mail/?view=cm&fs=1&to=shandhooshveeraragavan@gmail.com"
 target="_blank"
 rel="noopener noreferrer">
@@ -2642,13 +3172,33 @@ Email me
 </a>
 
 
-<a class="btn secondary"
-href="https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b9"
-target="_blank">
+<a
+class="btn secondary"
+href="https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b"
+target="_blank"
+rel="noopener noreferrer">
 
 LinkedIn
 
 </a>
+
+</div>
+
+
+<div class="contact-line">
+
+EMAIL:
+shandhooshveeraragavan@gmail.com
+
+<br>
+
+PHONE:
++91 9791206704
+
+<br>
+
+LOCATION:
+Coimbatore, India
 
 </div>
 
@@ -2675,6 +3225,17 @@ Shandhoosh V
 
 Mechatronics × AI × Robotics
 
+<br><br>
+
+<a
+href="https://shandhoosh2002.github.io/shandhoosh-portfolio/Shandhoosh-Portfolio"
+target="_blank"
+style="color:var(--gold);">
+
+Portfolio Website ↗
+
+</a>
+
 </div>
 
 
@@ -2695,6 +3256,17 @@ shandhooshveeraragavan@gmail.com
 
 <br>
 
+<a
+href="https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b"
+target="_blank"
+rel="noopener noreferrer">
+
+LinkedIn Profile ↗
+
+</a>
+
+<br>
+
 Coimbatore, India
 
 </div>
@@ -2709,18 +3281,20 @@ Coimbatore, India
      ========================================================= -->
 
 <div
-  class="modal"
-  id="modal"
-  onclick="closeProject(event)">
+class="modal"
+id="modal"
+onclick="closeProject(event)">
 
 <div
-  class="modalbox"
-  onclick="event.stopPropagation()">
+class="modalbox"
+onclick="event.stopPropagation()">
 
 <button
 class="close"
 onclick="closeProject()">
+
 ×
+
 </button>
 
 <div id="modalContent"></div>
@@ -2735,21 +3309,23 @@ onclick="closeProject()">
      ========================================================= -->
 
 <div
-  class="image-modal"
-  id="imageModal"
-  onclick="closeImageViewer(event)">
+class="image-modal"
+id="imageModal"
+onclick="closeImageViewer(event)">
 
 <button
-  class="image-modal-close"
-  onclick="closeImageViewer()">
+class="image-modal-close"
+onclick="closeImageViewer()">
+
 ×
+
 </button>
 
 <img
-  id="fullProjectImage"
-  src=""
-  alt="Project image"
-  onclick="event.stopPropagation();">
+id="fullProjectImage"
+src=""
+alt="Project image"
+onclick="event.stopPropagation();">
 
 </div>
 
@@ -2764,123 +3340,190 @@ const projects = {
 
 
 crawler:{
-title:"Magnetic Mobile Crawler with Robotic Arm",
+
+title:
+"Magnetic Mobile Crawler with Robotic Arm",
 
 text:
 "A mobile magnetic inspection platform designed for industrial weld-seam inspection. A camera and robotic arm are integrated to detect weld defects and mark identified locations.",
 
 bullets:[
+
 "Mechanical design and system integration",
+
 "Camera-based weld defect detection",
+
 "Robotic marking of detected defects",
+
 "Industrial mobile-robot architecture"
+
 ],
 
-tags:"ROBOTICS · MACHINE VISION · PYTHON · MECHANICAL DESIGN"
+tags:
+"ROBOTICS · MACHINE VISION · PYTHON · MECHANICAL DESIGN"
+
 },
 
 
 ut:{
-title:"Wired Magnetic Crawler for UT Inspection",
+
+title:
+"Wired Magnetic Crawler for UT Inspection",
 
 text:
 "A wired magnetic crawler developed for automated ultrasonic weld-seam inspection.",
 
 bullets:[
+
 "Integrated UT inspection instrument",
+
 "Encoder-based position tracking",
+
 "CAN communication",
+
 "Real-time crawler monitoring on metallic surfaces"
+
 ],
 
-tags:"UT · CAN · ENCODER · ROBOTICS"
+tags:
+"UT · CAN · ENCODER · ROBOTICS"
+
 },
 
 
 weld:{
-title:"Weld Defect Detection System",
+
+title:
+"Weld Defect Detection System",
 
 text:
 "A real-time computer vision system for detecting and localizing weld defects using an edge-AI platform.",
 
 bullets:[
+
 "YOLO-based real-time defect detection",
+
 "Image segmentation for localization",
+
 "NVIDIA Jetson edge deployment",
-"Camera-integrated inspection system"
+
+"Camera-integrated inspection system",
+
+"5,000+ annotated real-job weld images used in development"
+
 ],
 
-tags:"YOLO · OPENCV · JETSON · DEEP LEARNING"
+tags:
+"YOLO · OPENCV · JETSON · DEEP LEARNING"
+
 },
 
 
 stickout:{
-title:"ESSC Welding Stick-Out Measurement",
+
+title:
+"ESSC Welding Stick-Out Measurement",
 
 text:
 "A vision-based measurement system for detecting welding stick-out points and calculating height.",
 
 bullets:[
+
 "YOLO-based point detection",
+
 "Convex hull geometry",
+
 "Stick-out height calculation",
-"NVIDIA Jetson multi-camera integration"
+
+"NVIDIA Jetson multi-camera integration",
+
+"Industrial PLC integration using SLMP"
+
 ],
 
-tags:"YOLO · GEOMETRY · JETSON · VISION"
+tags:
+"YOLO · GEOMETRY · JETSON · VISION"
+
 },
 
 
 status:{
-title:"Machine Status Monitoring",
+
+title:
+"Machine Status Monitoring",
 
 text:
 "Computer vision and time-series monitoring applied to industrial machines.",
 
 bullets:[
+
 "YOLO object detection",
+
 "Operational-status determination",
+
 "Time-series analysis of machine cycles",
+
 "Applied to nozzle overlay and plate rolling machines"
+
 ],
 
-tags:"YOLO · TIME SERIES · INDUSTRIAL AUTOMATION"
+tags:
+"YOLO · TIME SERIES · INDUSTRIAL AUTOMATION"
+
 },
 
 
 creo:{
-title:"Parametric 3D Model Generation in Creo using Python",
+
+title:
+"Parametric 3D Model Generation in Creo using Python",
 
 text:
 "A Python-driven CAD automation workflow integrated with Creo.",
 
 bullets:[
+
 "User-defined parametric inputs",
+
 "Automatic generation of predefined models",
+
 "Database-driven model selection",
+
 "Python–Creo integration using Creopyson"
+
 ],
 
-tags:"PYTHON · CREO · CAD AUTOMATION"
+tags:
+"PYTHON · CREO · CAD AUTOMATION"
+
 },
 
 
 spider:{
-title:"4-Legged Spider Robot",
+
+title:
+"4-Legged Spider Robot",
 
 text:
 "A personal robotics project involving the mechanical design and 3D printing of a four-legged spider robot with short-range Bluetooth control.",
 
 bullets:[
+
 "Mechanical design and 3D printing",
+
 "Four-legged robotic mechanism",
+
 "Bluetooth-based control",
+
 "Compact robotic platform development"
+
 ],
 
-tags:"ROBOTICS · 3D PRINTING · BLUETOOTH",
+tags:
+"ROBOTICS · 3D PRINTING · BLUETOOTH",
 
 video:true
+
 }
 
 };
@@ -2954,7 +3597,9 @@ function openProject(key){
   `;
 
 
-  document.getElementById("modalContent").innerHTML = html;
+  document
+    .getElementById("modalContent")
+    .innerHTML = html;
 
   document
     .getElementById("modal")
@@ -3057,23 +3702,11 @@ function renderProjectImages(){
 
         el.innerHTML =
 
-          '<img ' +
-
-          'class="project-image" ' +
-
-          'src="' +
-          src.replace(/"/g,'&quot;') +
-          '" ' +
-
-          'alt="' +
-          key.replace(/-/g,' ') +
-          ' project visual" ' +
-
-          'onclick="event.stopPropagation(); openImageViewer(\'' +
-          src.replace(/'/g,"\\'") +
-          '\',\'' +
-          key.replace(/'/g,"\\'") +
-          '\')">';
+          `<img
+            class="project-image"
+            src="${src.replace(/"/g,'&quot;')}"
+            alt="${key.replace(/-/g,' ')} project visual"
+            onclick="event.stopPropagation(); openImageViewer('${src.replace(/'/g,"\\'")}','${key.replace(/'/g,"\\'")}')">`;
 
       }
 
@@ -3081,19 +3714,24 @@ function renderProjectImages(){
 
         el.innerHTML =
 
-          '<div class="image-placeholder">' +
+          `<div class="image-placeholder">
 
-          '<div class="icon">◫</div>' +
+            <div class="icon">
+              ◫
+            </div>
 
-          '<small>Project image placeholder</small>' +
+            <small>
+              Project image placeholder
+            </small>
 
-          '<span style="font-size:11px;opacity:.65">' +
+            <span
+              style="font-size:11px;opacity:.65">
 
-          'Add image in PROJECT_IMAGES' +
+              Add image in PROJECT_IMAGES
 
-          '</span>' +
+            </span>
 
-          '</div>';
+          </div>`;
 
       }
 
@@ -3124,7 +3762,7 @@ function renderProfileImage(){
     <img
       class="profile-image"
       src="${PROFILE_IMAGE.replace(/"/g,'&quot;')}"
-      alt="ShandhooshV">
+      alt="Shandhoosh V">
 
     <div class="hud-label">
       SHANDHOOSH V
@@ -3145,5 +3783,7 @@ renderProfileImage();
 
 </script>
 
+
 </body>
+
 </html>
