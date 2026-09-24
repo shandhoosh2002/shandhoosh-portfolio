@@ -1,0 +1,3822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Shandhoosh V — Mechatronics Engineer specializing in AI, computer vision, robotics, industrial automation and mechanical design.">
+
+<title>Shandhoosh V | AI × Robotics × Mechatronics</title>
+
+
+<script>
+
+/* =========================================================
+   PORTFOLIO MEDIA CONFIGURATION
+
+   Put your files inside:
+
+   assets/images/
+
+   Example:
+   assets/images/profile.jpeg
+   assets/images/magnetic-crawler.jpg
+   assets/images/spider.mp4
+
+   Leave "" if an image is not available yet.
+   ========================================================= */
+
+const PROFILE_IMAGE = "assets/images/profile.jpeg";
+
+const PROJECT_IMAGES = {
+
+  crawler: "assets/images/crawler.jpg",
+  ut: "assets/images/ut.jpg",
+  weld: "assets/images/weld.jpg",
+  stickout: "assets/images/stickout.png",
+  status: "assets/images/status.jpg",
+  creo: "assets/images/creo.jpg",
+
+  autoyolo: "assets/images/autoyolo.jpg",
+  labellab: "assets/images/labellab.jpg",
+  chatbot: "assets/images/chatbot.jpg",
+  shellspeed: "assets/images/shellspeed.jpg",
+
+  amr: "assets/images/amr.jpg",
+  robotarm: "assets/images/robotarm.jpg",
+  spider: "assets/images/spider.mp4",
+  generative: "assets/images/generative.jpg"
+};
+
+
+/* =========================================================
+   SPIDER ROBOT VIDEO
+   ========================================================= */
+
+const SPIDER_VIDEO = "assets/images/spider.mp4";
+
+
+/* =========================================================
+   ONLINE PROFILE LINKS
+   ========================================================= */
+
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b";
+
+const PORTFOLIO_URL =
+  "https://your-portfolio-link.com";
+
+const EMAIL =
+  "shandhooshveeraragavan@gmail.com";
+
+</script>
+
+
+<style>
+
+/* =========================================================
+   FUTURISTIC / IRON-MAN-INSPIRED THEME
+   ========================================================= */
+
+:root{
+
+  --bg:#05070a;
+  --bg2:#090d13;
+  --panel:#0d1219;
+  --panel2:#111820;
+
+  --red:#ff3b30;
+  --red2:#c81d25;
+
+  --gold:#f5b942;
+  --gold2:#ffcc66;
+
+  --cyan:#35d7ff;
+  --cyan2:#00a8cc;
+
+  --white:#f5f7fa;
+  --text:#d7dde5;
+  --muted:#87919e;
+
+  --line:rgba(255,255,255,.10);
+  --line-red:rgba(255,59,48,.35);
+  --line-cyan:rgba(53,215,255,.28);
+
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  margin:0;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(255,59,48,.08),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(53,215,255,.05),
+      transparent 30%
+    ),
+
+    var(--bg);
+
+  color:var(--white);
+
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+
+  width:min(1180px,92%);
+
+  margin:auto;
+}
+
+
+/* =========================================================
+   TECH GRID BACKGROUND
+   ========================================================= */
+
+body:before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  background-image:
+
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
+
+  background-size:50px 50px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 90%
+    );
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:100;
+
+  background:
+    rgba(5,7,10,.82);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.nav{
+
+  height:72px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.brand{
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  font-size:15px;
+}
+
+.brand span{
+
+  color:var(--red);
+}
+
+.links{
+
+  display:flex;
+
+  gap:25px;
+
+  color:#aeb7c3;
+
+  font-size:13px;
+}
+
+.links a{
+
+  transition:.25s;
+}
+
+.links a:hover{
+
+  color:#fff;
+
+  text-shadow:
+    0 0 12px rgba(53,215,255,.7);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+
+  min-height:100vh;
+
+  padding:
+    145px 0
+    80px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 82% 35%,
+      rgba(255,59,48,.18),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 18% 70%,
+      rgba(53,215,255,.09),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #05070a,
+      #0b1017 55%,
+      #08090c
+    );
+}
+
+.hero:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  right:-200px;
+  top:-200px;
+
+  border:
+    1px solid
+    rgba(245,185,66,.16);
+
+  border-radius:50%;
+
+  box-shadow:
+
+    0 0 0 50px
+    rgba(245,185,66,.025),
+
+    0 0 0 100px
+    rgba(245,185,66,.015);
+
+  pointer-events:none;
+}
+
+.hero-grid{
+
+  position:relative;
+
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    1.05fr .95fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.kicker{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:3px;
+
+  color:var(--cyan);
+
+  font-weight:800;
+}
+
+.kicker:before{
+
+  content:"";
+
+  width:28px;
+  height:2px;
+
+  background:var(--red);
+
+  box-shadow:
+    0 0 10px var(--red);
+}
+
+h1{
+
+  font-size:
+    clamp(46px,6.5vw,82px);
+
+  line-height:.95;
+
+  margin:
+    20px 0 25px;
+
+  letter-spacing:-4px;
+
+  max-width:850px;
+}
+
+.hero h1 span{
+
+  color:var(--red);
+
+  text-shadow:
+    0 0 30px
+    rgba(255,59,48,.35);
+}
+
+.hero p{
+
+  max-width:720px;
+
+  font-size:18px;
+
+  color:#aeb8c5;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.cta{
+
+  display:flex;
+
+  gap:13px;
+
+  margin-top:32px;
+
+  flex-wrap:wrap;
+}
+
+.btn{
+
+  padding:13px 19px;
+
+  border-radius:7px;
+
+  border:
+    1px solid var(--line);
+
+  font-weight:800;
+
+  font-size:13px;
+
+  transition:.25s;
+
+  cursor:pointer;
+}
+
+.btn:hover{
+
+  transform:translateY(-3px);
+}
+
+.btn.primary{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--red2)
+    );
+
+  border-color:var(--red);
+
+  color:#fff;
+
+  box-shadow:
+    0 0 25px
+    rgba(255,59,48,.22);
+}
+
+.btn.secondary{
+
+  color:var(--gold);
+
+  border-color:
+    rgba(245,185,66,.4);
+
+  background:
+    rgba(245,185,66,.04);
+}
+
+.btn.ghost{
+
+  color:#d9e1e9;
+}
+
+
+/* =========================================================
+   HERO CARD
+   ========================================================= */
+
+.hero-card{
+
+  position:relative;
+
+  border:
+    1px solid var(--line);
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.015)
+    );
+
+  border-radius:20px;
+
+  padding:25px;
+
+  box-shadow:var(--shadow);
+
+  overflow:hidden;
+}
+
+.hero-card:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:100%;
+  height:2px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--red),
+      var(--gold),
+      var(--cyan),
+      transparent
+    );
+
+  box-shadow:
+    0 0 15px
+    rgba(255,59,48,.6);
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.profile-frame{
+
+  height:430px;
+
+  border-radius:15px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(53,215,255,.08),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      145deg,
+      #0d141c,
+      #070a0e
+    );
+
+  border:
+    1px solid
+    rgba(53,215,255,.15);
+}
+
+.profile-frame:before,
+.profile-frame:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:45px;
+  height:45px;
+
+  border-color:var(--cyan);
+
+  border-style:solid;
+
+  opacity:.7;
+
+  z-index:3;
+}
+
+.profile-frame:before{
+
+  left:15px;
+  top:15px;
+
+  border-width:
+    2px 0 0 2px;
+}
+
+.profile-frame:after{
+
+  right:15px;
+  bottom:15px;
+
+  border-width:
+    0 2px 2px 0;
+}
+
+.profile-placeholder{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:12px;
+
+  color:#7e8a98;
+
+  text-align:center;
+
+  width:100%;
+  height:100%;
+}
+
+.profile-placeholder .profile-icon{
+
+  width:100px;
+  height:100px;
+
+  border-radius:50%;
+
+  border:
+    2px solid
+    var(--cyan);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:38px;
+
+  color:var(--cyan);
+
+  box-shadow:
+    0 0 25px
+    rgba(53,215,255,.15);
+}
+
+.profile-placeholder small{
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+.profile-image{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  object-position:center top;
+
+  display:block;
+}
+
+.hud-label{
+
+  position:absolute;
+
+  bottom:17px;
+  left:20px;
+
+  z-index:4;
+
+  font-family:monospace;
+
+  font-size:10px;
+
+  letter-spacing:1.5px;
+
+  color:var(--cyan);
+
+  background:
+    rgba(0,0,0,.55);
+
+  padding:7px 10px;
+
+  border-left:
+    2px solid
+    var(--red);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section{
+
+  padding:100px 0;
+
+  position:relative;
+}
+
+.section.dark{
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.015),
+      rgba(0,0,0,.12)
+    );
+}
+
+.section.light{
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #0b0f14,
+      #080b10
+    );
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.eyebrow{
+
+  font-family:monospace;
+
+  font-size:11px;
+
+  text-transform:uppercase;
+
+  letter-spacing:2.5px;
+
+  color:var(--red);
+
+  font-weight:900;
+}
+
+h2{
+
+  font-size:
+    clamp(34px,4vw,54px);
+
+  line-height:1.05;
+
+  letter-spacing:-2px;
+
+  margin:
+    10px 0 20px;
+}
+
+.lead{
+
+  font-size:17px;
+
+  color:var(--muted);
+
+  max-width:760px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1.3fr .7fr;
+
+  gap:60px;
+}
+
+.statbox{
+
+  padding:18px 0;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.statbox strong{
+
+  font-size:28px;
+
+  display:block;
+
+  color:var(--gold);
+
+  text-shadow:
+    0 0 15px
+    rgba(245,185,66,.15);
+}
+
+.statbox span{
+
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.timeline{
+
+  border-left:
+    1px solid
+    rgba(53,215,255,.25);
+
+  margin-top:38px;
+
+  padding-left:30px;
+}
+
+.role{
+
+  position:relative;
+
+  margin-bottom:42px;
+}
+
+.role:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:-37px;
+  top:7px;
+
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:var(--red);
+
+  border:
+    2px solid
+    var(--gold);
+
+  box-shadow:
+    0 0 15px
+    rgba(255,59,48,.65);
+}
+
+.role h3{
+
+  margin:0;
+
+  font-size:20px;
+}
+
+.meta{
+
+  color:var(--cyan);
+
+  font-family:monospace;
+
+  font-size:11px;
+
+  margin:
+    4px 0 10px;
+}
+
+.role ul{
+
+  margin:0;
+
+  padding-left:18px;
+
+  color:#9ba6b3;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+.project-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:22px;
+
+  margin-top:38px;
+}
+
+.project{
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #0d131a,
+      #080c11
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:13px;
+
+  overflow:hidden;
+
+  transition:.3s;
+
+  cursor:pointer;
+
+  position:relative;
+}
+
+.project:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:3px;
+  height:100%;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      var(--red),
+      transparent
+    );
+
+  opacity:.7;
+
+  z-index:3;
+}
+
+.project:hover{
+
+  transform:translateY(-6px);
+
+  border-color:
+    rgba(53,215,255,.28);
+
+  box-shadow:
+
+    0 20px 50px
+    rgba(0,0,0,.45),
+
+    0 0 20px
+    rgba(53,215,255,.05);
+}
+
+
+/* =========================================================
+   PROJECT VISUAL
+   ========================================================= */
+
+.visual{
+
+  height:220px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(53,215,255,.08),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      145deg,
+      #101821,
+      #070a0e
+    );
+}
+
+.visual:after{
+
+  content:"SYSTEM VISUAL";
+
+  position:absolute;
+
+  right:13px;
+  top:13px;
+
+  font-family:monospace;
+
+  font-size:9px;
+
+  letter-spacing:1.5px;
+
+  color:var(--gold);
+
+  border:
+    1px solid
+    rgba(245,185,66,.25);
+
+  padding:5px 7px;
+
+  background:
+    rgba(0,0,0,.4);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE PLACEHOLDER
+   ========================================================= */
+
+.image-placeholder{
+
+  height:100%;
+
+  min-height:220px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-direction:column;
+
+  gap:10px;
+
+  color:#65717f;
+
+  text-align:center;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(255,59,48,.025),
+      rgba(53,215,255,.035)
+    ),
+
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,.025) 0,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+}
+
+.image-placeholder .icon{
+
+  font-size:30px;
+
+  color:var(--cyan);
+
+  opacity:.6;
+}
+
+.image-placeholder small{
+
+  font-size:10px;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-image{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  cursor:zoom-in;
+}
+
+
+/* =========================================================
+   PROJECT BODY
+   ========================================================= */
+
+.project-body{
+
+  padding:23px;
+}
+
+.project-body h3{
+
+  margin:
+    0 0 8px;
+
+  font-size:20px;
+}
+
+.project-body p{
+
+  margin:0;
+
+  color:#8994a1;
+
+  font-size:13px;
+}
+
+.tags{
+
+  display:flex;
+
+  gap:7px;
+
+  flex-wrap:wrap;
+
+  margin-top:17px;
+}
+
+.tag{
+
+  font-size:10px;
+
+  border:
+    1px solid
+    rgba(53,215,255,.18);
+
+  border-radius:3px;
+
+  padding:
+    4px 8px;
+
+  color:#8bdff2;
+
+  background:
+    rgba(53,215,255,.035);
+
+  font-family:monospace;
+}
+
+
+/* =========================================================
+   COMPACT VISUAL
+   ========================================================= */
+
+.compact{
+
+  height:160px;
+}
+
+.compact .image-placeholder{
+
+  min-height:160px;
+}
+
+
+/* =========================================================
+   VIDEO PROJECT
+   ========================================================= */
+
+.video-container{
+
+  position:relative;
+
+  width:100%;
+  height:100%;
+
+  background:#000;
+}
+
+.project-video{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  background:#000;
+}
+
+.video-overlay{
+
+  position:absolute;
+
+  left:15px;
+  bottom:15px;
+
+  z-index:5;
+
+  pointer-events:none;
+
+  font-family:monospace;
+
+  font-size:9px;
+
+  letter-spacing:1.5px;
+
+  color:var(--gold);
+
+  background:
+    rgba(0,0,0,.7);
+
+  padding:6px 9px;
+
+  border-left:
+    2px solid
+    var(--red);
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skill-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:14px;
+
+  margin-top:35px;
+}
+
+.skill{
+
+  padding:20px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:9px;
+
+  background:
+    rgba(255,255,255,.015);
+}
+
+.skill:hover{
+
+  border-color:
+    rgba(245,185,66,.25);
+}
+
+.skill b{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  color:var(--gold);
+}
+
+.skill span{
+
+  font-size:12px;
+
+  color:#778290;
+}
+
+
+/* =========================================================
+   RESEARCH
+   ========================================================= */
+
+.pub{
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #10161e,
+      #0a0e13
+    );
+
+  color:#fff;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:12px;
+
+  padding:32px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  align-items:center;
+}
+
+.pub strong{
+
+  color:#f2f5f8;
+}
+
+.pub p{
+
+  color:#858f9d;
+
+  margin:
+    7px 0 0;
+}
+
+.pub .pill{
+
+  border:
+    1px solid
+    rgba(245,185,66,.35);
+
+  color:var(--gold);
+
+  padding:
+    9px 13px;
+
+  border-radius:3px;
+
+  font-size:10px;
+
+  font-family:monospace;
+
+  white-space:nowrap;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.cert-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:20px;
+
+  margin-top:38px;
+}
+
+.cert-card{
+
+  position:relative;
+
+  padding:26px;
+
+  min-height:190px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:12px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #0e151d,
+      #080c11
+    );
+
+  overflow:hidden;
+
+  transition:.3s;
+}
+
+.cert-card:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:4px;
+  height:100%;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      var(--gold),
+      var(--red),
+      transparent
+    );
+}
+
+.cert-card:hover{
+
+  transform:translateY(-5px);
+
+  border-color:
+    rgba(245,185,66,.35);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.35);
+}
+
+.cert-icon{
+
+  width:48px;
+  height:48px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border:
+    1px solid
+    rgba(53,215,255,.3);
+
+  border-radius:8px;
+
+  color:var(--cyan);
+
+  font-size:22px;
+
+  background:
+    rgba(53,215,255,.04);
+
+  margin-bottom:18px;
+}
+
+.cert-card h3{
+
+  margin:
+    0 0 8px;
+
+  font-size:18px;
+
+  color:#f5f7fa;
+}
+
+.cert-card .issuer{
+
+  color:var(--gold);
+
+  font-family:monospace;
+
+  font-size:10px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+.cert-card p{
+
+  color:#8994a1;
+
+  font-size:12px;
+
+  margin:0;
+}
+
+.cert-score{
+
+  display:inline-block;
+
+  margin-top:13px;
+
+  padding:5px 9px;
+
+  border:
+    1px solid
+    rgba(255,59,48,.35);
+
+  border-radius:3px;
+
+  color:#ff837c;
+
+  background:
+    rgba(255,59,48,.05);
+
+  font-family:monospace;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   CONFIDENTIALITY
+   ========================================================= */
+
+.notice{
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(255,59,48,.04),
+      rgba(53,215,255,.035)
+    );
+
+  border-left:
+    3px solid
+    var(--red);
+
+  padding:
+    20px 22px;
+
+  border-radius:5px;
+
+  color:#9ba6b2;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section{
+
+  background:
+
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255,59,48,.12),
+      transparent 35%
+    ),
+
+    #06080c;
+}
+
+.contact-line{
+
+  font-family:monospace;
+
+  color:var(--cyan);
+
+  font-size:12px;
+
+  margin-top:25px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+
+  background:#030507;
+
+  color:#707b88;
+
+  padding:45px 0;
+
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.footergrid{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+}
+
+.footergrid strong{
+
+  color:#fff;
+}
+
+.contact a{
+
+  color:var(--cyan);
+}
+
+
+/* =========================================================
+   PROJECT DETAILS MODAL
+   ========================================================= */
+
+.modal{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+    rgba(0,0,0,.82);
+
+  backdrop-filter:blur(8px);
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:20px;
+
+  z-index:200;
+}
+
+.modal.open{
+
+  display:flex;
+}
+
+.modalbox{
+
+  max-width:820px;
+
+  width:100%;
+
+  max-height:88vh;
+
+  overflow:auto;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #10161e,
+      #070a0e
+    );
+
+  border:
+    1px solid
+    rgba(53,215,255,.22);
+
+  border-radius:12px;
+
+  padding:34px;
+
+  box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.7);
+}
+
+.close{
+
+  float:right;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    #10161e;
+
+  color:#fff;
+
+  border-radius:4px;
+
+  width:34px;
+  height:34px;
+
+  font-size:18px;
+
+  cursor:pointer;
+}
+
+.modalbox h2{
+
+  color:#fff;
+}
+
+.modalbox li{
+
+  margin:7px 0;
+
+  color:#9ba6b3;
+}
+
+
+/* =========================================================
+   MODAL VIDEO
+   ========================================================= */
+
+.modal-video{
+
+  width:100%;
+
+  max-height:430px;
+
+  background:#000;
+
+  border-radius:8px;
+
+  margin:
+    20px 0;
+
+  display:block;
+}
+
+
+/* =========================================================
+   FULL-SCREEN IMAGE VIEWER
+   ========================================================= */
+
+.image-modal{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+    rgba(0,0,0,.92);
+
+  backdrop-filter:blur(10px);
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:30px;
+
+  z-index:300;
+}
+
+.image-modal.open{
+
+  display:flex;
+}
+
+.image-modal img{
+
+  max-width:95vw;
+
+  max-height:90vh;
+
+  width:auto;
+
+  height:auto;
+
+  object-fit:contain;
+
+  display:block;
+
+  border:
+    1px solid
+    rgba(53,215,255,.35);
+
+  border-radius:8px;
+
+  box-shadow:
+
+    0 0 50px
+    rgba(0,0,0,.8),
+
+    0 0 25px
+    rgba(53,215,255,.08);
+}
+
+.image-modal-close{
+
+  position:absolute;
+
+  top:20px;
+  right:25px;
+
+  width:42px;
+  height:42px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:5px;
+
+  background:#10161e;
+
+  color:#fff;
+
+  font-size:24px;
+
+  cursor:pointer;
+
+  z-index:301;
+}
+
+.image-modal-close:hover{
+
+  border-color:var(--cyan);
+
+  color:var(--cyan);
+}
+
+
+/* =========================================================
+   HUD DECORATION
+   ========================================================= */
+
+.hud-line{
+
+  width:100%;
+
+  height:1px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      var(--red),
+      var(--gold),
+      transparent
+    );
+
+  margin:
+    25px 0;
+}
+
+.status-indicator{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  font-family:monospace;
+
+  font-size:9px;
+
+  letter-spacing:1px;
+
+  color:#8f9aa7;
+}
+
+.status-indicator:before{
+
+  content:"";
+
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:#35d7a2;
+
+  box-shadow:
+    0 0 8px
+    rgba(53,215,162,.7);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:900px){
+
+  .links{
+    display:none;
+  }
+
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-grid{
+    gap:40px;
+  }
+
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cert-grid{
+    grid-template-columns:1fr;
+  }
+
+  .skill-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .hero{
+    padding-top:120px;
+  }
+
+  .profile-frame{
+    height:380px;
+  }
+}
+
+
+@media(max-width:520px){
+
+  .skill-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .profile-frame{
+    height:330px;
+  }
+
+  .pub{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .modalbox{
+    padding:23px;
+  }
+
+  .image-modal{
+    padding:15px;
+  }
+
+  .image-modal img{
+    max-width:96vw;
+    max-height:88vh;
+  }
+
+  .image-modal-close{
+    top:12px;
+    right:12px;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
+<nav>
+
+<div class="container nav">
+
+<a class="brand" href="#home">
+SHANDHOOSH<span> V</span>
+</a>
+
+<div class="links">
+
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#skills">Skills</a>
+<a href="#research">Research</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<header class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="kicker">
+MECHATRONICS × AI × ROBOTICS
+</div>
+
+<h1>
+Building <span>intelligent</span> machines for the real world.
+</h1>
+
+<p>
+Mechatronics Engineer focused on AI, computer vision,
+industrial automation, robotics and mechanical design —
+combining physical engineering with intelligent software
+to build practical systems.
+</p>
+
+<div class="cta">
+
+<a class="btn primary" href="#projects">
+Explore Projects
+</a>
+
+<a class="btn secondary" href="#contact">
+Let's Connect
+</a>
+
+<a
+class="btn ghost"
+href="https://mail.google.com/mail/?view=cm&fs=1&to=shandhooshveeraragavan@gmail.com"
+target="_blank"
+rel="noopener noreferrer">
+
+Email
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROFILE PHOTO -->
+
+<div class="hero-card">
+
+<div class="profile-frame" id="profileFrame">
+
+<div class="profile-placeholder">
+
+<div class="profile-icon">
+◉
+</div>
+
+<small>
+Profile photo placeholder
+</small>
+
+<span style="font-size:12px;color:#65717f">
+Add image in PROFILE_IMAGE
+</span>
+
+</div>
+
+<div class="hud-label">
+SHANDHOOSH V
+</div>
+
+</div>
+
+<p style="
+margin:14px 0 0;
+color:#788492;
+font-size:11px;
+font-family:monospace;
+">
+
+MECHATRONICS ENGINEER
+// AI / COMPUTER VISION / ROBOTICS
+
+</p>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section class="section light" id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="eyebrow">
+01 / PROFILE
+</div>
+
+<h2>
+Engineering across hardware, software and intelligence.
+</h2>
+
+<p class="lead">
+
+I am a Mechatronics Engineer with hands-on R&D experience
+in AI-powered automation, computer vision, mobile robots,
+manipulators and CAD-driven product development.
+
+</p>
+
+<p class="lead">
+
+My work sits at the intersection of physical machines and
+intelligent software: designing mechanisms, selecting
+electrical components, building vision pipelines and
+connecting systems for industrial use.
+
+</p>
+
+</div>
+
+<div>
+
+<div class="statbox">
+<strong>9.35 (Rank 2)</strong>
+<span>VIT Chennai CGPA</span>
+</div>
+
+<div class="statbox">
+<strong>AI + CV</strong>
+<span>Industrial Machine Vision</span>
+</div>
+
+<div class="statbox">
+<strong>Robotics</strong>
+<span>Mobile robots & Manipulators</span>
+</div>
+
+<div class="statbox">
+<strong>CAD</strong>
+<span>SolidWorks / Creo / Fusion 360 / UG NX</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+     ========================================================= -->
+
+<section class="section" id="experience">
+
+<div class="container">
+
+<div class="eyebrow">
+02 / EXPERIENCE
+</div>
+
+<h2>
+R&D Experience
+</h2>
+
+<div class="timeline">
+
+
+<div class="role">
+
+<h3>
+Assistant Manager — ADAS R&D · Maruti Suzuki India Limited
+</h3>
+
+<div class="meta">
+JUL 2026 — PRESENT
+</div>
+
+<ul>
+
+<li>
+Working in ESC improvement system.
+</li>
+
+<li>
+Automating HILS efficiency improvement test cases.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="role">
+
+<h3>
+Senior Engineer — Design, R&D · Larsen & Toubro Ltd.
+</h3>
+
+<div class="meta">
+JUL 2024 — JUN 2026
+</div>
+
+<ul>
+
+<li>
+Developed AI-powered automation solutions for industrial applications.
+</li>
+
+<li>
+Created computer vision applications for quality control and efficiency.
+</li>
+
+<li>
+Designed and developed mobile robots and manipulators for industrial applications.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="role">
+
+<h3>
+Intern · RABWIN Industries
+</h3>
+
+<div class="meta">
+MAY 2022 — JUN 2022
+</div>
+
+<ul>
+
+<li>
+Worked with CNC machines and performed quality testing for automobile parts.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONFIDENTIALITY
+     MOVED BEFORE INDUSTRIAL PROJECTS
+     ========================================================= -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="eyebrow">
+03 / CONFIDENTIALITY
+</div>
+
+<h2>
+Responsible Presentation of Industrial Work.
+</h2>
+
+<div class="notice">
+
+Certain industrial projects in this portfolio use
+AI-generated conceptual illustrations for external
+presentation.
+
+<br><br>
+
+Actual project photographs, CAD models, drawings,
+plant images, production data and company-specific
+technical information are confidential and have
+therefore not been included.
+
+<br><br>
+
+Non-confidential photographs, CAD renders, system
+diagrams, screenshots and representative visuals
+may be added to the project sections.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     INDUSTRIAL PROJECTS
+     ========================================================= -->
+
+<section class="section dark" id="projects">
+
+<div class="container">
+
+<div class="eyebrow">
+04 / SELECTED WORK
+</div>
+
+<h2>
+Industrial Projects
+</h2>
+
+<p class="lead">
+
+Selected R&D projects combining computer vision,
+AI/ML, robotics, mechanical design and industrial
+automation.
+
+</p>
+
+<div class="project-grid">
+
+
+<!-- CRAWLER -->
+
+<div class="project"
+     onclick="openProject('crawler')">
+
+<div class="visual project-visual"
+     data-image="crawler">
+</div>
+
+<div class="project-body">
+
+<h3>
+Magnetic Mobile Crawler + Robotic Arm
+</h3>
+
+<p>
+Magnetic mobile inspection platform with camera-based weld
+defect detection and robotic marking.
+</p>
+
+<div class="tags">
+
+<span class="tag">ROBOTICS</span>
+<span class="tag">YOLO</span>
+<span class="tag">PYTHON</span>
+<span class="tag">MECHANICAL DESIGN</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- UT -->
+
+<div class="project"
+     onclick="openProject('ut')">
+
+<div class="visual project-visual"
+     data-image="ut">
+</div>
+
+<div class="project-body">
+
+<h3>
+Wired Magnetic Crawler for UT Inspection
+</h3>
+
+<p>
+Magnetic crawler integrating a UT instrument,
+encoder-based tracking and CAN communication.
+</p>
+
+<div class="tags">
+
+<span class="tag">UT</span>
+<span class="tag">CAN</span>
+<span class="tag">ENCODER</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- WELD -->
+
+<div class="project"
+     onclick="openProject('weld')">
+
+<div class="visual project-visual"
+     data-image="weld">
+</div>
+
+<div class="project-body">
+
+<h3>
+Weld Defect Detection System
+</h3>
+
+<p>
+Real-time weld defect detection using YOLO,
+segmentation and NVIDIA Jetson edge computing.
+</p>
+
+<div class="tags">
+
+<span class="tag">YOLO</span>
+<span class="tag">OPENCV</span>
+<span class="tag">JETSON</span>
+<span class="tag">VISION</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- STICKOUT -->
+
+<div class="project"
+     onclick="openProject('stickout')">
+
+<div class="visual project-visual"
+     data-image="stickout">
+</div>
+
+<div class="project-body">
+
+<h3>
+ESSC Welding Stick-Out Measurement
+</h3>
+
+<p>
+YOLO-based point detection with convex-hull geometry
+for stick-out height measurement.
+</p>
+
+<div class="tags">
+
+<span class="tag">YOLO</span>
+<span class="tag">GEOMETRY</span>
+<span class="tag">JETSON</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MACHINE STATUS -->
+
+<div class="project"
+     onclick="openProject('status')">
+
+<div class="visual project-visual"
+     data-image="status">
+</div>
+
+<div class="project-body">
+
+<h3>
+Machine Status Monitoring
+</h3>
+
+<p>
+YOLO object detection combined with time-series analysis
+to monitor machine cycles and activity.
+</p>
+
+<div class="tags">
+
+<span class="tag">YOLO</span>
+<span class="tag">TIME SERIES</span>
+<span class="tag">AUTOMATION</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CREO -->
+
+<div class="project"
+     onclick="openProject('creo')">
+
+<div class="visual project-visual"
+     data-image="creo">
+</div>
+
+<div class="project-body">
+
+<h3>
+Parametric 3D Model Generation
+</h3>
+
+<p>
+Python + Creo system for generating predefined CAD models
+from user-defined parameters.
+</p>
+
+<div class="tags">
+
+<span class="tag">PYTHON</span>
+<span class="tag">CREO</span>
+<span class="tag">CREOPYSON</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     AI & SOFTWARE
+     ========================================================= -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="eyebrow">
+05 / AI & SOFTWARE
+</div>
+
+<h2>
+Tools built around engineering workflows.
+</h2>
+
+<div class="project-grid">
+
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="autoyolo">
+</div>
+
+<div class="project-body">
+
+<h3>
+Auto-YOLO Training Application
+</h3>
+
+<p>
+GUI for dataset selection and configurable YOLO
+training parameters.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="labellab">
+</div>
+
+<div class="project-body">
+
+<h3>
+LabelLab
+</h3>
+
+<p>
+Image annotation application supporting bounding boxes,
+basic shapes and polygon-based labeling.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="chatbot">
+</div>
+
+<div class="project-body">
+
+<h3>
+AI Chatbot for File Management
+</h3>
+
+<p>
+NLP-based file search and retrieval with JSON-based
+live file tracking.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="shellspeed">
+</div>
+
+<div class="project-body">
+
+<h3>
+Rotating Shell Speed Measurement
+</h3>
+
+<p>
+Color detection and time/speed analysis to measure
+rotating-shell motion patterns.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ROBOTICS
+     ========================================================= -->
+
+<section class="section dark">
+
+<div class="container">
+
+<div class="eyebrow">
+06 / ROBOTICS & DESIGN
+</div>
+
+<h2>
+From algorithms to physical machines.
+</h2>
+
+<div class="project-grid">
+
+
+<!-- AMR -->
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="amr">
+</div>
+
+<div class="project-body">
+
+<h3>
+Autonomous Mobile Robot
+</h3>
+
+<p>
+A* path planning and SLAM for autonomous navigation
+in dynamic environments.
+</p>
+
+<div class="tags">
+
+<span class="tag">ROS</span>
+<span class="tag">SLAM</span>
+<span class="tag">A*</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ROBOT ARM -->
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="robotarm">
+</div>
+
+<div class="project-body">
+
+<h3>
+6-Axis 3D Printed Robot Arm
+</h3>
+
+<p>
+Designed and 3D printed a six-axis manipulator
+with Bluetooth/mobile control.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SPIDER ROBOT -->
+
+<div class="project"
+     onclick="openProject('spider')">
+
+<div class="visual spider-video">
+
+<video
+class="project-video"
+muted
+autoplay
+loop
+playsinline
+preload="metadata"
+onclick="event.stopPropagation();">
+
+<source
+src="assets/images/spider.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="video-overlay">
+SPIDER BOT // LIVE VIDEO
+</div>
+
+</div>
+
+<div class="project-body">
+
+<h3>
+4-Legged Spider Robot
+</h3>
+
+<p>
+Designed and 3D printed a four-legged robot
+with short-range Bluetooth control.
+</p>
+
+<div class="tags">
+
+<span class="tag">ROBOTICS</span>
+<span class="tag">3D PRINTING</span>
+<span class="tag">BLUETOOTH</span>
+<span class="tag">VIDEO</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- GENERATIVE DESIGN -->
+
+<div class="project">
+
+<div class="visual project-visual compact"
+     data-image="generative">
+</div>
+
+<div class="project-body">
+
+<h3>
+Generative Design Chair
+</h3>
+
+<p>
+Applied a genetic algorithm to explore optimized
+chair structures in Fusion 360.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+     ========================================================= -->
+
+<section class="section light" id="skills">
+
+<div class="container">
+
+<div class="eyebrow">
+07 / ENGINEERING TOOLKIT
+</div>
+
+<h2>
+Technical Stack
+</h2>
+
+<div class="skill-grid">
+
+
+<div class="skill">
+
+<b>AI & Vision</b>
+
+<span>
+YOLO · OpenCV · Machine Vision · Deep Learning
+</span>
+
+</div>
+
+
+<div class="skill">
+
+<b>Programming</b>
+
+<span>
+Python · C · C++ · Java · MATLAB
+</span>
+
+</div>
+
+
+<div class="skill">
+
+<b>CAD & Design</b>
+
+<span>
+SolidWorks · Creo · Fusion 360 · Solid Edge · UG NX · Blender · nTopology
+</span>
+
+</div>
+
+
+<div class="skill">
+
+<b>Robotics</b>
+
+<span>
+ROS · Arduino · Simulink · CarMaker · NVIDIA L4T
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH
+     ========================================================= -->
+
+<section class="section" id="research">
+
+<div class="container">
+
+<div class="eyebrow">
+08 / RESEARCH
+</div>
+
+<h2>
+Published Work
+</h2>
+
+<div class="pub">
+
+<div>
+
+<a
+href="https://www.sciencedirect.com/science/article/pii/S0950705124013285"
+target="_blank"
+rel="noopener noreferrer"
+style="display:block;">
+
+<strong>
+Intelligent Fault Diagnosis for Tribo-Mechanical Systems
+by Machine Learning: Multi-Feature Extraction and
+Ensemble Voting Methods
+</strong>
+
+<p>
+Published in Knowledge-Based Systems,
+Volume 305 · Dec 2024
+</p>
+
+<p style="
+margin-top:12px;
+color:var(--cyan);
+font-family:monospace;
+font-size:11px;
+">
+
+VIEW PUBLICATION ↗
+
+</p>
+
+</a>
+
+</div>
+
+<div class="pill">
+RESEARCH PUBLICATION
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+     ========================================================= -->
+
+<section class="section light" id="certifications">
+
+<div class="container">
+
+<div class="eyebrow">
+09 / CERTIFICATIONS
+</div>
+
+<h2>
+Certifications & Professional Learning
+</h2>
+
+<p class="lead">
+
+Certifications supporting my background across mechanical
+design, industrial AI, machine learning, IIoT and software
+development.
+
+</p>
+
+
+<div class="cert-grid">
+
+
+<!-- CSWA -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+⚙
+</div>
+
+<div class="issuer">
+Dassault Systèmes / SOLIDWORKS
+</div>
+
+<h3>
+Certified SOLIDWORKS Associate — CSWA
+</h3>
+
+<p>
+Certification demonstrating proficiency in SOLIDWORKS
+3D CAD modelling, part modelling, assemblies and
+core mechanical-design concepts.
+</p>
+
+<div class="cert-score">
+CSWA SCORE: 192 / 200
+</div>
+
+</div>
+
+
+<!-- IIT ROORKEE -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+AI
+</div>
+
+<div class="issuer">
+IIT Roorkee
+</div>
+
+<h3>
+Applications of AI, ML & IIoT for Industry
+</h3>
+
+<p>
+Professional learning focused on the application of
+Artificial Intelligence, Machine Learning and Industrial
+IoT technologies in industrial environments.
+</p>
+
+</div>
+
+
+<!-- C C++ -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+C++
+</div>
+
+<div class="issuer">
+CSC Institute
+</div>
+
+<h3>
+Diploma in C, C++ & OOP Concepts
+</h3>
+
+<p>
+Training covering C and C++ programming fundamentals,
+object-oriented programming concepts and software
+development principles.
+</p>
+
+</div>
+
+
+<!-- JAVA -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+J
+</div>
+
+<div class="issuer">
+CSC Institute
+</div>
+
+<h3>
+Diploma in Java
+</h3>
+
+<p>
+Training covering Java programming fundamentals,
+object-oriented programming and application-development
+concepts.
+</p>
+
+</div>
+
+
+<!-- GERMAN A1 -->
+
+<div class="cert-card">
+
+<div class="cert-icon">
+DE
+</div>
+
+<div class="issuer">
+German Language
+</div>
+
+<h3>
+German Language — A1 Certificate
+</h3>
+
+<p>
+A1-level German language certification covering
+basic communication, everyday vocabulary and
+foundational reading, writing, listening and speaking skills.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section class="section contact-section"
+         id="contact">
+
+<div class="container">
+
+<div class="eyebrow">
+10 / CONTACT
+</div>
+
+<h2>
+Let's build something intelligent.
+</h2>
+
+<p class="lead">
+
+Open to engineering opportunities across AI,
+computer vision, robotics, automation and
+mechanical R&D.
+
+</p>
+
+
+<p class="lead">
+
+Also open to freelance projects in 3D modeling,
+coding and engineering project consultation.
+
+</p>
+
+
+<div class="cta">
+
+<a
+class="btn primary"
+href="https://mail.google.com/mail/?view=cm&fs=1&to=shandhooshveeraragavan@gmail.com"
+target="_blank"
+rel="noopener noreferrer">
+
+Email me
+
+</a>
+
+
+<a
+class="btn secondary"
+href="https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b"
+target="_blank"
+rel="noopener noreferrer">
+
+LinkedIn
+
+</a>
+
+</div>
+
+
+<div class="contact-line">
+
+EMAIL:
+shandhooshveeraragavan@gmail.com
+
+<br>
+
+PHONE:
++91 9791206704
+
+<br>
+
+LOCATION:
+Coimbatore, India
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+<div class="container footergrid">
+
+<div>
+
+<strong>
+Shandhoosh V
+</strong>
+
+<br>
+
+Mechatronics × AI × Robotics
+
+<br><br>
+
+<a
+href="https://shandhoosh2002.github.io/shandhoosh-portfolio/Shandhoosh-Portfolio"
+target="_blank"
+style="color:var(--gold);">
+
+Portfolio Website ↗
+
+</a>
+
+</div>
+
+
+<div class="contact">
+
+<a
+href="https://mail.google.com/mail/?view=cm&fs=1&to=shandhooshveeraragavan@gmail.com"
+target="_blank"
+rel="noopener noreferrer">
+
+shandhooshveeraragavan@gmail.com
+
+</a>
+
+<br>
+
++91 9791206704
+
+<br>
+
+<a
+href="https://www.linkedin.com/in/shandhoosh-veeraragavan-3877231b"
+target="_blank"
+rel="noopener noreferrer">
+
+LinkedIn Profile ↗
+
+</a>
+
+<br>
+
+Coimbatore, India
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     PROJECT DETAILS MODAL
+     ========================================================= -->
+
+<div
+class="modal"
+id="modal"
+onclick="closeProject(event)">
+
+<div
+class="modalbox"
+onclick="event.stopPropagation()">
+
+<button
+class="close"
+onclick="closeProject()">
+
+×
+
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     FULL-SCREEN IMAGE VIEWER
+     ========================================================= -->
+
+<div
+class="image-modal"
+id="imageModal"
+onclick="closeImageViewer(event)">
+
+<button
+class="image-modal-close"
+onclick="closeImageViewer()">
+
+×
+
+</button>
+
+<img
+id="fullProjectImage"
+src=""
+alt="Project image"
+onclick="event.stopPropagation();">
+
+</div>
+
+
+<!-- =========================================================
+     PROJECT DATA + FUNCTIONS
+     ========================================================= -->
+
+<script>
+
+const projects = {
+
+
+crawler:{
+
+title:
+"Magnetic Mobile Crawler with Robotic Arm",
+
+text:
+"A mobile magnetic inspection platform designed for industrial weld-seam inspection. A camera and robotic arm are integrated to detect weld defects and mark identified locations.",
+
+bullets:[
+
+"Mechanical design and system integration",
+
+"Camera-based weld defect detection",
+
+"Robotic marking of detected defects",
+
+"Industrial mobile-robot architecture"
+
+],
+
+tags:
+"ROBOTICS · MACHINE VISION · PYTHON · MECHANICAL DESIGN"
+
+},
+
+
+ut:{
+
+title:
+"Wired Magnetic Crawler for UT Inspection",
+
+text:
+"A wired magnetic crawler developed for automated ultrasonic weld-seam inspection.",
+
+bullets:[
+
+"Integrated UT inspection instrument",
+
+"Encoder-based position tracking",
+
+"CAN communication",
+
+"Real-time crawler monitoring on metallic surfaces"
+
+],
+
+tags:
+"UT · CAN · ENCODER · ROBOTICS"
+
+},
+
+
+weld:{
+
+title:
+"Weld Defect Detection System",
+
+text:
+"A real-time computer vision system for detecting and localizing weld defects using an edge-AI platform.",
+
+bullets:[
+
+"YOLO-based real-time defect detection",
+
+"Image segmentation for localization",
+
+"NVIDIA Jetson edge deployment",
+
+"Camera-integrated inspection system",
+
+"5,000+ annotated real-job weld images used in development"
+
+],
+
+tags:
+"YOLO · OPENCV · JETSON · DEEP LEARNING"
+
+},
+
+
+stickout:{
+
+title:
+"ESSC Welding Stick-Out Measurement",
+
+text:
+"A vision-based measurement system for detecting welding stick-out points and calculating height.",
+
+bullets:[
+
+"YOLO-based point detection",
+
+"Convex hull geometry",
+
+"Stick-out height calculation",
+
+"NVIDIA Jetson multi-camera integration",
+
+"Industrial PLC integration using SLMP"
+
+],
+
+tags:
+"YOLO · GEOMETRY · JETSON · VISION"
+
+},
+
+
+status:{
+
+title:
+"Machine Status Monitoring",
+
+text:
+"Computer vision and time-series monitoring applied to industrial machines.",
+
+bullets:[
+
+"YOLO object detection",
+
+"Operational-status determination",
+
+"Time-series analysis of machine cycles",
+
+"Applied to nozzle overlay and plate rolling machines"
+
+],
+
+tags:
+"YOLO · TIME SERIES · INDUSTRIAL AUTOMATION"
+
+},
+
+
+creo:{
+
+title:
+"Parametric 3D Model Generation in Creo using Python",
+
+text:
+"A Python-driven CAD automation workflow integrated with Creo.",
+
+bullets:[
+
+"User-defined parametric inputs",
+
+"Automatic generation of predefined models",
+
+"Database-driven model selection",
+
+"Python–Creo integration using Creopyson"
+
+],
+
+tags:
+"PYTHON · CREO · CAD AUTOMATION"
+
+},
+
+
+spider:{
+
+title:
+"4-Legged Spider Robot",
+
+text:
+"A personal robotics project involving the mechanical design and 3D printing of a four-legged spider robot with short-range Bluetooth control.",
+
+bullets:[
+
+"Mechanical design and 3D printing",
+
+"Four-legged robotic mechanism",
+
+"Bluetooth-based control",
+
+"Compact robotic platform development"
+
+],
+
+tags:
+"ROBOTICS · 3D PRINTING · BLUETOOTH",
+
+video:true
+
+}
+
+};
+
+
+/* =========================================================
+   OPEN PROJECT DETAILS MODAL
+   ========================================================= */
+
+function openProject(key){
+
+  const project = projects[key];
+
+  if(!project) return;
+
+
+  let html = `
+
+    <div class="eyebrow">
+      ${project.tags}
+    </div>
+
+    <h2>
+      ${project.title}
+    </h2>
+
+    <p class="lead">
+      ${project.text}
+    </p>
+
+  `;
+
+
+  /* SPIDER ROBOT VIDEO */
+
+  if(project.video){
+
+    html += `
+
+      <video
+        class="modal-video"
+        controls
+        playsinline
+        preload="metadata">
+
+        <source
+          src="${SPIDER_VIDEO}"
+          type="video/mp4">
+
+        Your browser does not support HTML5 video.
+
+      </video>
+
+    `;
+
+  }
+
+
+  html += `
+
+    <div class="hud-line"></div>
+
+    <ul>
+
+      ${project.bullets
+        .map(item => `<li>${item}</li>`)
+        .join("")}
+
+    </ul>
+
+  `;
+
+
+  document
+    .getElementById("modalContent")
+    .innerHTML = html;
+
+  document
+    .getElementById("modal")
+    .classList.add("open");
+
+}
+
+
+/* =========================================================
+   CLOSE PROJECT DETAILS MODAL
+   ========================================================= */
+
+function closeProject(event){
+
+  if(
+    !event ||
+    event.target.id === "modal" ||
+    event.target.className === "close"
+  ){
+
+    document
+      .getElementById("modal")
+      .classList.remove("open");
+
+  }
+
+}
+
+
+/* =========================================================
+   OPEN FULL-SCREEN IMAGE VIEWER
+   ========================================================= */
+
+function openImageViewer(src, alt){
+
+  const modal =
+    document.getElementById("imageModal");
+
+  const image =
+    document.getElementById("fullProjectImage");
+
+
+  image.src = src;
+
+  image.alt =
+    alt || "Project image";
+
+
+  modal.classList.add("open");
+
+}
+
+
+/* =========================================================
+   CLOSE FULL-SCREEN IMAGE VIEWER
+   ========================================================= */
+
+function closeImageViewer(event){
+
+  if(
+    !event ||
+    event.target.id === "imageModal" ||
+    event.target.className === "image-modal-close"
+  ){
+
+    const modal =
+      document.getElementById("imageModal");
+
+    const image =
+      document.getElementById("fullProjectImage");
+
+
+    modal.classList.remove("open");
+
+    image.src = "";
+
+  }
+
+}
+
+
+/* =========================================================
+   RENDER PROJECT IMAGES
+   ========================================================= */
+
+function renderProjectImages(){
+
+  document
+    .querySelectorAll(".project-visual")
+    .forEach(function(el){
+
+      const key =
+        el.dataset.image;
+
+      const src =
+        PROJECT_IMAGES[key];
+
+
+      if(src){
+
+        el.innerHTML =
+
+          `<img
+            class="project-image"
+            src="${src.replace(/"/g,'&quot;')}"
+            alt="${key.replace(/-/g,' ')} project visual"
+            onclick="event.stopPropagation(); openImageViewer('${src.replace(/'/g,"\\'")}','${key.replace(/'/g,"\\'")}')">`;
+
+      }
+
+      else{
+
+        el.innerHTML =
+
+          `<div class="image-placeholder">
+
+            <div class="icon">
+              ◫
+            </div>
+
+            <small>
+              Project image placeholder
+            </small>
+
+            <span
+              style="font-size:11px;opacity:.65">
+
+              Add image in PROJECT_IMAGES
+
+            </span>
+
+          </div>`;
+
+      }
+
+  });
+
+}
+
+
+/* =========================================================
+   RENDER PROFILE IMAGE
+   ========================================================= */
+
+function renderProfileImage(){
+
+  const frame =
+    document.getElementById("profileFrame");
+
+
+  if(!PROFILE_IMAGE){
+
+    return;
+
+  }
+
+
+  frame.innerHTML = `
+
+    <img
+      class="profile-image"
+      src="${PROFILE_IMAGE.replace(/"/g,'&quot;')}"
+      alt="Shandhoosh V">
+
+    <div class="hud-label">
+      SHANDHOOSH V
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+renderProjectImages();
+
+renderProfileImage();
+
+</script>
+
+
+</body>
+
+</html>
